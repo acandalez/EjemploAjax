@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Juego Colores</title>
+<script language="JavaScript"> 
+<!-- 
+var td1;
+var colorselc;
+var primeravez=0;
+var cont=0;
+ 
+/* function overTD(td,color){td.bgColor=color;};
+function outTD(td,color){td.style.cursor='default';td.bgColor="#FF99FF";};
+ */
+	
+function clickTD(td)
+{	
+	
+/*	 if(td.bgColor=="#FF0000")
+	{
+		td.bgColor="#FFFFFF";
+	 }else{
+	 	td.bgColor="#FF99FF";
+	 } */ 
+	 
+ 
+	 if(primeravez==0)
+	{
+			td1=td;
+			colorselc=td1.bgColor;
+			primeravez=1;
+			cont++;
+	}else
+	{
+		if (td.id!=td1.id)
+		{
+			if (colorselc==td.bgColor)
+			{
+				td.bgColor="#FFFFFF";
+				td1.bgColor="#FFFFFF";
+				primeravez=0;
+				cont++;
+				if(cont==20)
+				{
+					alert("Felicidades has terminado");
+				}
+			}
+			else
+				{
+				alert("No son iguales");
+				}
+			
+			}
+		} 
+}
+//--> 
+</script> 
+<!-- onMouseOver="overTD(this,'#FF0000');" onMouseOut="outTD(this,'FFFFFF');"onClick="clickTD(this,'FFFFFF');"  -->
+</head>
+<body>
+    <table WIDTH="1000" HEIGHT="650" border="10px" align=center> <!-- Lo cambiaremos por CSS -->
+            <caption>Tabla de Colores</caption>
+            <tr>
+                <td id="c1" align=center class="enlace" bgcolor="#FF0000" onClick="clickTD(this);">Contenido 1</td>
+                <td id="c2" align=center class="enlace" bgcolor="#3399FF" onClick="clickTD(this);">Contenido 2</td>
+                <td id="c3" align=center class="enlace" bgcolor="#990099" onClick="clickTD(this);">Contenido 3</td>
+                <td id="c4" align=center class="enlace" bgcolor="#00FF00" onClick="clickTD(this);">Contenido 4</td>
+                <td id="c5" align=center class="enlace" bgcolor="#FFFF00" onClick="clickTD(this);">Contenido 5</td>
+            </tr>
+            <tr>
+                <td id="c6" align=center class="enlace" bgcolor="#00FF00" onClick="clickTD(this);">Contenido 6</td>
+                <td id="c7" align=center class="enlace" bgcolor="#FF0000" onClick="clickTD(this);">Contenido 7</td>
+                <td id="c8" align=center class="enlace" bgcolor="#FFFF00" onClick="clickTD(this);">Contenido 8</td>
+                <td id="c9" align=center class="enlace" bgcolor="#990099" onClick="clickTD(this);">Contenido 9</td>
+                <td id="c10" align=center class="enlace" bgcolor="#3399FF" onClick="clickTD(this);">Contenido 10</td>
+            </tr>
+            <tr>
+                <td id="c11" align=center class="enlace" bgcolor="#FFFF00" onClick="clickTD(this);">Contenido 11</td>
+                <td id="c12" align=center class="enlace" bgcolor="#00FF00" onClick="clickTD(this);">Contenido 12</td>
+                <td id="c13" align=center class="enlace" bgcolor="#3399FF" onClick="clickTD(this);">Contenido 13</td>
+                <td id="c14" align=center class="enlace" bgcolor="#FF0000" onClick="clickTD(this);">Contenido 14</td>
+                <td id="c15" align=center class="enlace" bgcolor="#990099" onClick="clickTD(this);">Contenido 15</td>
+            </tr>
+            <tr>
+                <td id="c16" align=center class="enlace" bgcolor="#990099" onClick="clickTD(this);">Contenido 16</td>
+                <td id="c17" align=center class="enlace" bgcolor="#3399FF" onClick="clickTD(this);">Contenido 17</td>
+                <td id="c18" align=center class="enlace" bgcolor="#00FF00" onClick="clickTD(this);">Contenido 18</td>
+                <td id="c19" align=center class="enlace" bgcolor="#FFFF00" onClick="clickTD(this);">Contenido 19</td>
+                <td id="c20" align=center class="enlace" bgcolor="#FF0000" onClick="clickTD(this);">Contenido 20</td>
+            </tr>
+        </table>
+        
+</body>
+</html>

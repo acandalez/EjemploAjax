@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+#contenedor {
+    display: table;
+    border: 2px solid #f6f6f6;
+    
+    text-align: center;
+	width:100%;
+	height:100%;
+	margin-bottom:20px
+    
+}
+#contenidos {
+    display: table-row;
+	
+}
+#columna1 {
+    display: table-cell;
+    position:relative;
+    vertical-align: middle;
+  
+	width: 20%;
+	height: 25%;
+	
+}
+#container {
+    width: 804px;
+  height: 604px;
+ 
+  position: absolute;
+  top: 40%;
+  left: 40%;
+ 
+  margin-top: -250px;   /* height/2 = 500px / 2 */
+  margin-left: -250px;  /* width/2 = 500px / 2 */
+}
+.rojo {
+	background-color:#D75759;
+}
